@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+
+
+
+
+<div class="modal hidden">
+    <div class="modal-content">
+        <h2>Create new ellement</h2>
+        <h3>Title</h3>
+        <div class="input-back">
+        <input class="input_main" type="text" placeholder="">
+        </div>
+    <h3>Description(Optional)</h3>
+    <textarea class="text_modal"></textarea>
+
+    <div class="button_block2">
+         <button onclick="exit_m()" class="Cancel">Cancel</button>
+         <button class="Create">Create task</button>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+    <div class="body-cont" >
+        <div class="head"></div>
+        <div class="search-block">
+                <div class="image-search">
+                    <div class="svg1">
+                    <svg  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#737373" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.5 17.5L13.9167 13.9167" stroke="#737373" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></div>
+                
+            <input class="input_main" type="text" placeholder="Search tasks...">
+        </div>
+    </div>
+        <div class="buttons-list">
+            <div class="left-block">
+                <div class="button-b">
+                    <div class="NameButton NameButton-All">All</div>
+                    <div class="Count-All">0</div>
+                </div>
+                <div class="button-b">
+                    <div class="NameButton-Active">Active</div>
+                    <div class="Count-Active">0</div>
+                </div>
+                <div class="button-b">
+                    <div class="NameButton-Done">Done</div>
+                    <div class="Count-Done">0</div>
+                </div>
+            </div>
+            <div class="right-block">
+                <div class="svg-2">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.33331 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 3.33333V12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                
+            </div>
+            <p>New task</p>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="conteiner_logic">
+            
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+
+<script src="main.js" ></script>
+</html>
