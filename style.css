@@ -149,120 +149,143 @@ border-radius: 8px;
 
 .hidden { display: none; }
 
-.modal{
+.modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.modal-content{
-padding-left:25px;
-padding-right:25px;
-width: 480px;
-height: 362px;
-border-radius: 10px;
-border: 1px solid rgba(0, 0, 0, 0.10);
-background: #FFF;
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+.modal.hidden {
+  display: none;
 }
 
+.modal-content {
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 32px);
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: #FFF;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10),
+              0 4px 6px -4px rgba(0, 0, 0, 0.10);
+  overflow-y: auto;
+}
 
-
-.input-back{
-display: flex;
-height: 36px;
-padding: 4px 12px;
-align-items: center;
-flex-shrink: 0;
-align-self: stretch;
-border-radius: 8px;
-border: 1px solid rgba(0, 0, 0, 0.00);
-background: #F3F3F5;
+.input-back {
+  display: flex;
+  width: 100%;
+  min-height: 36px;
+  padding: 4px 12px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: #F3F3F5;
 }
 
 .modal-content h2 {
-    color: #0A0A0A;
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: 18px; /* 100% */
+  color: #0A0A0A;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 16px;
 }
 
 .modal-content h3 {
-    color: #0A0A0A;
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 14px; /* 100% */
+  color: #0A0A0A;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  margin: 12px 0 8px;
 }
 
-.text_modal{
-display: flex;
-width: 95%;
-height: 98px;
-padding: 8px 12px;
-align-items: flex-start;
-flex-shrink: 0;
-align-self: stretch;
-border-radius: 8px;
-border: 1px solid rgba(0, 0, 0, 0.00);
-background: #F3F3F5;
-
-}
-
-textarea{
+.text_modal {
+  display: block;
+  width: 100%;
+  min-height: 98px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: #F3F3F5;
   resize: none;
 }
 
-.button_block2{
-padding-top: 25px;
-display: flex;
-width: 430px;
-height: 36px;
-padding-right: 0;
-justify-content: flex-end;
-align-items: flex-start;
-gap: 8px;
+textarea {
+  resize: none;
+  font-family: Inter, sans-serif;
+  outline: none;
 }
 
-.Cancel{
-display: flex;
-width: 80.467px;
-height: 36px;
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-flex-shrink: 0;
-border-radius: 8px;
-border: 1px solid rgba(0, 0, 0, 0.10);
-background: #FFF;
+.button_block2 {
+  padding-top: 25px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.Create{
-display: flex;
-width: 120px;
-height: 36px;
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-flex-shrink: 0;
-border-radius: 8px;
-opacity: 0.5;
-background: #030213;
-color: #FFF;
-text-align: center;
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
+.Cancel {
+  display: flex;
+  min-width: 80px;
+  height: 36px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: #FFF;
+}
+
+.Create {
+  display: flex;
+  min-width: 120px;
+  height: 36px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0.5;
+  background: #030213;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 12px;
+  }
+
+  .modal-content {
+    padding: 20px 16px;
+    border-radius: 8px;
+  }
+
+  .button_block2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .Cancel,
+  .Create {
+    width: 100%;
+  }
 }
 
 
