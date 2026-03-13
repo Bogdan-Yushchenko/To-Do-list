@@ -157,6 +157,7 @@ border-radius: 8px;
   justify-content: center;
   padding: 16px;
   background: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
 }
 
 .modal.hidden {
@@ -174,6 +175,7 @@ border-radius: 8px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10),
               0 4px 6px -4px rgba(0, 0, 0, 0.10);
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .input-back {
@@ -183,8 +185,9 @@ border-radius: 8px;
   padding: 4px 12px;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   background: #F3F3F5;
+  box-sizing: border-box;
 }
 
 .modal-content h2 {
@@ -213,9 +216,10 @@ border-radius: 8px;
   min-height: 98px;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   background: #F3F3F5;
   resize: none;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -229,7 +233,7 @@ textarea {
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   flex-wrap: wrap;
 }
